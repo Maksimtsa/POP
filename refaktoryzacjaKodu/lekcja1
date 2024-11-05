@@ -1,1 +1,17 @@
-
+git log
+git mv "nazwa" "nowaNazwa"
+git rm -f nazwa - usuniecia pliku ktory jest po renameu
+git log new_name.txt
+touch file
+git log file
+git blame file
+echo "txt" > file
+echo "txt" >> file
+git blame file
+git log file
+git rm fileg
+git restore file
+git stash save "txt"
+git stash list
+git stash apply
+git stash drop - usunia ostatni
