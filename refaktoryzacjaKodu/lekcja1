@@ -1,17 +1,15 @@
-git log
-git mv "nazwa" "nowaNazwa"
-git rm -f nazwa - usuniecia pliku ktory jest po renameu
-git log new_name.txt
-touch file
-git log file
-git blame file
-echo "txt" > file
-echo "txt" >> file
-git blame file
-git log file
-git rm fileg
-git restore file
-git stash save "txt"
-git stash list
-git stash apply
-git stash drop - usunia ostatni
+git log: Wyświetla historię commitów.
+git mv "nazwa" "nowaNazwa": Zmienia nazwę pliku.
+git rm -f nazwa: Usuwa plik (wymuszone usunięcie).
+git log new_name.txt: Pokazuje historię commitów dla pliku new_name.txt.
+touch file: Tworzy pusty plik file.
+git log file: Wyświetla historię commitów dla file.
+git blame file: Pokazuje, kto wprowadził zmiany do każdej linii w file.
+echo "txt" > file: Nadpisuje file tekstem "txt".
+echo "txt" >> file: Dodaje tekst "txt" do file.
+git rm file: Usuwa file z repozytorium.
+git restore file: Przywraca file do ostatniej zatwierdzonej wersji.
+git stash save "txt": Zapisuje aktualne zmiany w stosie (stash) z opisem "txt".
+git stash list: Wyświetla listę zapisanych stosów.
+git stash apply: Przywraca ostatni zapisany stos.
+git stash drop: Usuwa ostatni stos.
