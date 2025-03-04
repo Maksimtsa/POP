@@ -67,19 +67,34 @@ namespace ConsoleApp8
         private static string GetValidName()
         {
             string name;
+            const byte MinLength = 3;
+            const byte MaxLength = 50;
+
+            string[] errorMessange = new string[]
+            {
+                "Imie new może być puste!",
+                $"Imie musi mieć co najmniej {MinLength} znaków",
+                $"Imie nie może mieć więcej niż {MaxLength} znaków"
+            };
+
             while (true)
             {
-                Console.WriteLine("Podaj imie: ");
+                Console.WriteLine("Podaj imie(Min: 3 znaki, Max: 50 znaków): ");
                 name = Console.ReadLine()?.Trim();
 
                 if (string.IsNullOrWhiteSpace(name))
                 {
-                    Console.WriteLine("Imię nie może być puste. Spróbuj ponownie.");
+                    Console.WriteLine(errorMessange[0]);
                 }
-                else
-                {    
-                    return name;
+                else if (name.Length < MinLength)
+                {
+                    Console.WriteLine(errorMessange[1]);
                 }
+                else if (name.Length < MaxLength)
+                {
+                    Console.WriteLine(errorMessange[2]);
+                }
+                while (string.IsNullOrWhiteSpace(name) || name.Length < MinLength || name.Length > MaxLength) return name;
             }
         }
     }
