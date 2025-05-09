@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Podaj dwie liczby\n";
+    while(true){
+    cout << "\nPodaj dwie liczby\n";
     int a, b;
     cin >> a >> b;
     
@@ -19,7 +20,6 @@ int main()
     int choice;
     
     cin >> choice;
-    
     switch(choice){
         case 1:
             cout << a + b;
@@ -52,5 +52,6 @@ int main()
             exit(0);
         default:
             cout << "Wybierz poprawną opcję";
+    }
     }
 }
